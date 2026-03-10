@@ -1,3 +1,7 @@
+package Ui;
+
+import backend.Backend;
+
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
@@ -8,7 +12,7 @@ import java.util.Locale;
 
 /**
  * PACEPAY - Main Application File
- * Main Entry Point: Login class
+ * Main Entry Point: Ui.Login class
  */
 public class Login extends JFrame {
     private final RoundedTextField emailField = new RoundedTextField(20);
@@ -44,7 +48,7 @@ public class Login extends JFrame {
                 "<span style='font-size:12px;color:#B0C4DE'>Fast • Simple • Secure</span></div></html>");
         left.add(brand);
 
-        // --- Right Panel: Login Form ---
+        // --- Right Panel: Ui.Login Form ---
         JPanel right = new JPanel(new GridBagLayout());
         right.setBackground(new Color(20, 20, 40));
 
@@ -80,7 +84,7 @@ public class Login extends JFrame {
                 dispose();
                 new BankMenu(email, id);
             } else {
-                JOptionPane.showMessageDialog(this, "Invalid credentials", "Login failed", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Invalid credentials", "Ui.Login failed", JOptionPane.ERROR_MESSAGE);
             }
         });
 
